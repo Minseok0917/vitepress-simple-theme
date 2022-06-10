@@ -1,0 +1,16 @@
+[
+    {
+        "text": "Guide",
+        "link": "/guide/",
+        "activeMatch": "/guide/"
+    },
+    {
+        "text": "Configs",
+        "link": "/config/introduction",
+        "activeMatch": "/config/"
+    },
+    {
+        "text": "Changelog",
+        "link": "https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md"
+    }
+]
