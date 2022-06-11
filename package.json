@@ -1,4 +1,7 @@
 {
+    "title": "안녕하세요",
+    "description": "ㅇㄴㅁㅇㄴㅁ",
+    "markdownDir": "markdown",
     "scripts": {
         "docs:dev": "vitepress dev docs"
     },

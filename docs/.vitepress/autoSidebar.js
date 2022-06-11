@@ -1,42 +1,46 @@
-const path = require("path");
 const fs = require("fs");
-const markdownDirectoryPath = path.join(`${__dirname}/../`);
-const directoryName = {
-    2022: "2022년",
-};
-const convertDirectoryName = (title) => directoryName[title] || title;
-const convertMarkdownName = (title) => markdownName[title] || title;
-const getDirectorys = (directoryPath) =>
-    fs.readdirSync(directoryPath, { withFileTypes: true });
+const path = require("path");
+const menus = require("./menu.json");
+const { markdownDir } = require("../../package.json");
 
-function all(directoryPath, parentDirectoryPath = "") {
-    let directorys = getDirectorys(directoryPath);
-    if (!parentDirectoryPath) {
-        directorys = directorys.filter(({ name }) => name !== ".vuepress");
-    }
-    return directorys
-        .filter((file) => {
-            const isDirectory = file.isDirectory();
-            const filterMarkdown = ["README.md", "index.md"];
-            const isFilterMarkdown = filterMarkdown.includes(file.name);
-            if (isDirectory || !isFilterMarkdown) return file;
+const docsDir = path.resolve(__dirname, "../");
+const mdDir = path.resolve(docsDir, markdownDir);
+const getDir = (dirPath) => fs.readdirSync(dirPath, { withFileTypes: true });
+
+const sidebar = Object.fromEntries(
+    menus
+        .filter(({ activeMatch }) => {
+            if (!activeMatch) return false;
+            const menuDir = path.join(mdDir, activeMatch);
+            const isDir = fs.existsSync(menuDir);
+            return isDir;
         })
-        .map((file) => {
-            const isDirectory = file.isDirectory();
-            const childDirectoryPath = `${directoryPath}/${file.name}`;
-            const title = file.name.replace(".md", "");
-            const path = `${parentDirectoryPath}/${title}`;
-            const result = {
-                isDirectory,
-                path,
-                title,
-            };
-            if (isDirectory) {
-                result.title = convertDirectoryName(title);
-                result.children = all(childDirectoryPath, path);
-            }
-            return result;
-        });
-}
+        .map(({ activeMatch }) => {
+            const plink = activeMatch.replace(/\//g, "");
+            const menuDir = path.join(mdDir, activeMatch);
+            const menuChildDirs = getDir(menuDir).filter((file) =>
+                file.isDirectory()
+            );
+            const menuSidebar = menuChildDirs.map(({ name }) => {
+                const menuChildDir = path.join(menuDir, name);
+                const menuChildDirName = name;
+                const menuChildFiles = getDir(menuChildDir)
+                    .filter((file) => !file.isDirectory())
+                    .map(({ name }) => name.replace(/.md/, ""))
+                    .map((name) => ({
+                        text: name,
+                        link: `/${plink}/${menuChildDirName}/${name}`,
+                    }));
+                return {
+                    text: name,
+                    collapsible: true,
+                    collapsed: true,
+                    items: menuChildFiles,
+                };
+            });
+            return [activeMatch, menuSidebar];
+        })
+);
 
-module.exports = all(markdownDirectoryPath);
+console.log(sidebar);
+module.exports = sidebar;

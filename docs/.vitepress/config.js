@@ -1,21 +1,51 @@
-import menu from "./menu.json";
 const path = require("path");
+const menu = require("./menu.json");
+const sidebar = require("./autoSidebar");
+const { title, description, markdownDir } = require("../../package.json");
 
 const resolveAlias = Object.fromEntries(
     Object.entries({
         "@": "/",
-    }).map(([key, value]) => [key, path.resolve(__dirname, value)])
+        "@custom-theme": "/custom-theme",
+        "@theme-default": "/theme-default",
+        "@css": "/css",
+    }).map(([key, value]) => [key, path.join(__dirname, value)])
 );
 
+console.log(resolveAlias);
+const docsDir = path.resolve(__dirname, "../");
+const mdDir = path.resolve(docsDir, markdownDir);
+
+const a = {
+    "/guide/": [
+        {
+            text: "info",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                { text: "a", link: "/guide/info/a" },
+                { text: "b", link: "/guide/info/b" },
+            ],
+        },
+    ],
+    sidebar1: [
+        {
+            text: "guide",
+            items: [
+                { text: "a", link: "/guide/info/a" },
+                { text: "b", link: "/guide/info/b" },
+            ],
+        },
+    ],
+};
+
 export default {
-    title: "VitePress",
-    description: "Just playing around.",
-    srcDir: path.resolve(__dirname, "../markdown"),
+    title,
+    description,
+    srcDir: mdDir,
     themeConfig: {
         nav: menu,
-        sidebar: {
-            "/guide/": sidebarGuide(),
-        },
+        sidebar,
     },
     vite: {
         server: {
@@ -36,11 +66,11 @@ function sidebarGuide() {
             items: [
                 {
                     text: "A",
-                    link: "a",
+                    link: "guide/a",
                 },
                 {
                     text: "B",
-                    link: "b",
+                    link: "guide/b",
                 },
             ],
         },

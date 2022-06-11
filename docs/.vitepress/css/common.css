@@ -1,0 +1,14 @@
+.container[data-v-2d6af484] {
+    max-width: none;
+}
+.VPSidebar[data-v-259d4d10] {
+    width: auto;
+    padding: 72px 32px 128px;
+}
+.VPSidebar.open[data-v-259d4d10] {
+    width: calc(100vw - 64px);
+}
+
+.VPNavBar.has-sidebar .content[data-v-2d6af484] {
+    backdrop-filter: none;
+}
