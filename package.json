@@ -1,11 +1,10 @@
 {
-    "title": "안녕하세요",
-    "description": "ㅇㄴㅁㅇㄴㅁ",
     "markdownDir": "markdown",
     "scripts": {
         "docs:dev": "vitepress dev docs"
     },
     "dependencies": {
+        "dayjs": "^1.11.3",
         "vitepress": "^1.0.0-alpha.1"
     }
 }
