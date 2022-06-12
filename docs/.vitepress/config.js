@@ -12,38 +12,16 @@ const resolveAlias = Object.fromEntries(
     }).map(([key, value]) => [key, path.join(__dirname, value)])
 );
 
-console.log(resolveAlias);
 const docsDir = path.resolve(__dirname, "../");
 const mdDir = path.resolve(docsDir, markdownDir);
 
-const a = {
-    "/guide/": [
-        {
-            text: "info",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                { text: "a", link: "/guide/info/a" },
-                { text: "b", link: "/guide/info/b" },
-            ],
-        },
-    ],
-    sidebar1: [
-        {
-            text: "guide",
-            items: [
-                { text: "a", link: "/guide/info/a" },
-                { text: "b", link: "/guide/info/b" },
-            ],
-        },
-    ],
-};
-
 export default {
-    title,
-    description,
+    title: "VitePress Simple Theme",
+    description: "공유용 마크다운 블로그입니다. 많이 사용해주세요 😊",
     srcDir: mdDir,
+    lastUpdated: true,
     themeConfig: {
+        // logo: "http://t1.daumcdn.net/liveboard/petzzi/f3582f7c08454fcbb54533997269b819.JPG",
         nav: menu,
         sidebar,
     },
