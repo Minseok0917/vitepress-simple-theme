@@ -3,6 +3,9 @@
         <div class="info">
             <p class="createBy">{{ createBy }}</p>
             <h1 class="title">{{ frontmatter.title }}</h1>
+            <div class="img-box" v-if="frontmatter.image">
+                <img :src="frontmatter.image" alt="image" />
+            </div>
         </div>
         <Content class="vp-doc" />
     </main>

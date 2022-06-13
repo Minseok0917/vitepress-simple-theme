@@ -1,156 +1,86 @@
 ---
-title: TITLE
+title: Markdown Base
 description: 세리가라
 createBy: 2022-01-21
+image: https://photo.coolenjoy.net/data/editor/2102/d778f4ec8403ae4caaaa6415ea73b28932c47005.jpg
 ---
 
-::: info infoTitle
-This is an info box.
-:::
+## 🐶 Example - 1
 
-::: tip tipTTitle
-This is a tip.
-
-::: tip tipTTitle
-This is a tip.
-
-::: tip tipTTitle
-This is a tip.
-
-:::
-
-::: warning warnTitle
-This is a warning.
-:::
-
-::: danger dangerTitle
-This is a dangerous warning.
-:::
-
-::: details detailsTitle
-This is a details block.
-:::
-
-# H1 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-
-```markdown
-# H1 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-```
-
-## H2 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-
-```markdown
-## H2 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-```
-
-### H3 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-
-```markdown
-### H3 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-```
-
-#### H4 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-
-```markdown
-#### H4 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-```
-
-##### H5 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-
-```markdown
-##### H5 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-```
-
-###### H6 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-
-```markdown
-###### H6 : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-```
-
-`dadasd` ~~213113~~ **dasdsa**
-
-[Guide](http://localhost:3000/guide/info/a.html)
-
-![Image](https://media.nature.com/lw800/magazine-assets/d41586-020-01430-5/d41586-020-01430-5_17977552.jpg)
+---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus neque debitis esse! Id, nisi commodi pariatur distinctio impedit maxime! Voluptatem, aliquid dolores. Atque minus voluptatum provident explicabo sint temporibus.
 
-| Tables   |      Are      |  Cool |
-| -------- | :-----------: | ----: |
-| col 1 is | left-aligned  | $1600 |
-| col 2 is |   centered    |   $12 |
-| col 3 is | right-aligned |    $1 |
+![Image](https://img.insight.co.kr/static/2016/08/12/700/7US4164XAX997B6I8038.jpg)
 
-## Nemo minus vitae, modi beatae sequi a voluptatem unde ratione amet dolor quis quod consequatur nulla accusamus quisquam exercitationem, quos quibusdam itaque!
+## 🐺 Example - 2
 
-<hr>
+---
 
-> dsadsadsaasd
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus neque debitis esse! Id, nisi commodi pariatur distinctio impedit maxime! Voluptatem, aliquid dolores. Atque minus voluptatum provident explicabo sint temporibus.
+
+| 2022.01 | SUN | MON | TUE | WED | THU | FRI | SAT |
+| ------- | --- | --- | --- | --- | --- | --- | --- |
+| $row1   | 26  | 27  | 28  | 29  | 30  | 31  | 1   |
+| $row2   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
+| $row3   | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+| $row4   | 16  | 17  | 18  | 19  | 20  | 21  | 22  |
+| $row5   | 23  | 24  | 25  | 26  | 27  | 28  | 29  |
+| $row6   | 30  | 31  | 1   | 2   | 3   | 4   | 5   |
+
+## 🐱 Example - 3
+
+---
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus neque debitis esse! Id, nisi commodi pariatur distinctio impedit maxime! Voluptatem, aliquid dolores. Atque minus voluptatum provident explicabo sint temporibus.
+
+> 🎈 **Lorem ipsum, dolor sit amet consectetur adipisicing elit.**
 >
-> > dsadaskasdsdaasdas
-> >
-> > > dasdsajk;asdjkldsajklsdajlk
+> [Dolore voluptatibus neque debitis esse!](#example-1) Id, nisi commodi pariatur distinctio impedit maxime! ~~Voluptatem, aliquid dolores.~~
+>
+> > Atque minus voluptatum provident explicabo sint temporibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus neque debitis esse! Id, nisi commodi pariatur distinctio impedit maxime! Voluptatem, aliquid dolores. Atque minus voluptatum provident explicabo sint temporibus.
 
--   dsa
-    -   dsadsadsaasd
--   dasdsadsa
+## 🦁 Example - 4
+
+---
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus neque debitis esse! Id, nisi commodi pariatur distinctio impedit maxime! Voluptatem, aliquid dolores. Atque minus voluptatum provident explicabo sint temporibus.
+
+-   section 1
+    -   section 1-1
+        -   section 1-1-1
+        -   section 1-1-2
+        -   section 1-1-3
+            -   section 1-1-3-1
+            -   section 1-1-3-2
+            -   section 1-1-3-3
+    -   section 1-2
+    -   section 1-3
+-   seciton 2
+-   seciton 3
+
+## 🐯 Example - 5
+
+---
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus neque debitis esse! Id, nisi commodi pariatur distinctio impedit maxime! Voluptatem, aliquid dolores. Atque minus voluptatum provident explicabo sint temporibus.
 
 ```js
-// <block:setup:1>
-const path = require("path");
-const menu = require("./menu.json");
-const sidebar = require("./autoSidebar");
-const { title, description, markdownDir } = require("../../package.json");
-
-const resolveAlias = Object.fromEntries(
-    Object.entries({
-        "@": "/",
-        "@custom-theme": "/custom-theme",
-        "@theme-default": "/theme-default",
-        "@css": "/css",
-    }).map(([key, value]) => [key, path.join(__dirname, value)])
-);
-
-const docsDir = path.resolve(__dirname, "../");
-const mdDir = path.resolve(docsDir, markdownDir);
-// </block:setup>
-
-export default {
-    title: "민석의 블로그",
-    description: "공유용 마크다운 블로그입니다. 많이 사용해주세요 😊",
-    srcDir: mdDir,
-    themeConfig: {
-        logo: "http://t1.daumcdn.net/liveboard/petzzi/f3582f7c08454fcbb54533997269b819.JPG",
-        nav: menu,
-        sidebar,
-    },
-    vite: {
-        server: {
-            host: true,
-        },
-        resolve: {
-            alias: resolveAlias,
-        },
-    },
-};
-
-function sidebarGuide() {
-    return [
-        {
-            text: "Guide",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {
-                    text: "A",
-                    link: "guide/a",
-                },
-                {
-                    text: "B",
-                    link: "guide/b",
-                },
-            ],
-        },
-    ];
-}
+console.log("Hello VitePress Simple Theme");
 ```
+
+## 🦒 Example - 6
+
+---
+
+`h1` `h2(Example-6)` `h3` `h4` `h5` `h6`
+
+# H1
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
