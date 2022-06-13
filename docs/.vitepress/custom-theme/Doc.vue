@@ -13,6 +13,7 @@ import { useData } from "vitepress";
 import dayjs from "dayjs";
 
 const { frontmatter } = useData();
+console.log(frontmatter.value.title);
 const createBy = computed(() =>
     dayjs(frontmatter.value.createBy).format(`DD MMM YYYY`)
 );

@@ -96,6 +96,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus ne
 -   dasdsadsa
 
 ```js
+// <block:setup:1>
 const path = require("path");
 const menu = require("./menu.json");
 const sidebar = require("./autoSidebar");
@@ -112,6 +113,7 @@ const resolveAlias = Object.fromEntries(
 
 const docsDir = path.resolve(__dirname, "../");
 const mdDir = path.resolve(docsDir, markdownDir);
+// </block:setup>
 
 export default {
     title: "민석의 블로그",
