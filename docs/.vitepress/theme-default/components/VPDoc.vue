@@ -4,7 +4,6 @@ import { useData } from "vitepress";
 import { useSidebar } from "../composables/sidebar";
 import VPDocAside from "./VPDocAside.vue";
 import VPDocFooter from "./VPDocFooter.vue";
-import CustomDoc from "@custom-theme/Doc.vue";
 
 const { page } = useData();
 const { hasSidebar } = useSidebar();
@@ -50,7 +49,9 @@ const pageName = computed(() => {
 
             <div class="content">
                 <div class="content-container">
-                    <CustomDoc />
+                    <main class="main">
+                        <Content class="vp-doc" :class="pageName" />
+                    </main>
 
                     <VPDocFooter />
                 </div>

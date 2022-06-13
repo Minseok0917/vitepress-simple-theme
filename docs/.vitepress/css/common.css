@@ -1,3 +1,18 @@
+/**
+ * Base Setting
+ * ------------------------------------------------------------------------- */
+
+/* Noto Sans KR */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/**
+ * VitePress Theme Custom
+ * -------------------------------------------------------------------------- */
+
 .container[data-v-2d6af484] {
     max-width: none;
 }
@@ -10,5 +25,75 @@
 }
 
 .VPNavBar.has-sidebar .content[data-v-2d6af484] {
+    padding-right: 32px;
+    background: var(--vp-c-bg);
     backdrop-filter: none;
+    border-bottom: 1px solid var(--vp-c-bg-alt);
+}
+
+.VPContent.has-sidebar[data-v-230aa7d6] {
+    padding-left: var(--vp-sidebar-width);
+    padding-right: 0;
+}
+.content-container[data-v-23d9e754] {
+    margin: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 960px) {
+    .VPContent.has-sidebar[data-v-230aa7d6] {
+        padding-left: 0;
+    }
+}
+@media (max-width: 768px) {
+    .VPNavBar.has-sidebar .content[data-v-2d6af484] {
+        padding-right: inherit;
+    }
+}
+
+.VPNavBar[data-v-2d6af484] {
+    padding-right: 0;
+}
+.VPNavBarMenu :is(.VPNavBarMenuLink, .VPLink, .text) {
+    font-weight: 300;
+}
+
+/**
+ * Markdown Container
+ * -------------------------------------------------------------------------- */
+
+.markdown-container .info {
+    text-align: center;
+}
+.markdown-container .info .title {
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.markdown-container .info .createBy {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+.content[data-v-23d9e754] {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.VPDoc table {
+    display: table;
+}
+.VPDoc :is(img, table) {
+    margin: 0 auto;
+}
+.VPDoc h1 {
+    font-weight: 900;
+}
+.VPDoc h2 {
+    font-weight: 700;
+    border-top: 0;
+}
+.VPDoc :is(h3, h4, h5, h6) {
+    font-weight: 600;
 }
