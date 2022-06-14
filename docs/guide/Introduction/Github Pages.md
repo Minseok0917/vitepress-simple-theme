@@ -7,22 +7,22 @@ description: vitepress-simple-theme Github Pages Auto Deploy
 2.  main.yml
 
 ```
-
-language: node_js
-node_js:
-  - lts/*
-install:
-  - yarn install # npm ci
-script:
-  - yarn docs:build # npm run docs:build
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs/.vitepress/dist
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  on:
-    branch: main
+name: Build and Deploy
+on: [push]
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@main
+            - run: node -v
+            - name: Vuepress deploy
+              uses: jenkey2011/vuepress-deploy@1.6.1
+              env:
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  BUILD_SCRIPT: yarn && yarn build
+                  TARGET_BRANCH: gh-pages
+                  BUILD_DIR: .vitepress/dist
 ```
 
 3.  [github developer setting](https://github.com/settings/tokens/new)
