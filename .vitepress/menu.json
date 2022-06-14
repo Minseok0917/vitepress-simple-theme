@@ -1,7 +1,7 @@
 [
     {
         "text": "Guide",
-        "link": "/guide/info/a",
+        "link": "/guide/introduction/github-auto-deploy",
         "activeMatch": "/guide/"
     },
     {
