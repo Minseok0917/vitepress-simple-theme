@@ -1,7 +1,6 @@
 ---
 title: Markdown Container
-description: 세리가라
-createBy: 2022-01-21
+description: vitepress-simple-theme Markdown Container
 ---
 
 <!--------------------------------------------------

@@ -18,7 +18,8 @@ const mdDir = path.resolve(docsDir, markdownDir);
 export default {
     base: `/${repository}/`,
     title: "VitePress Simple Theme",
-    description: "공유용 마크다운 블로그입니다. 많이 사용해주세요 😊",
+    description:
+        "Theme for sharing created using vitepress. Please use it a lot 😊",
     srcDir: mdDir,
     lastUpdated: true,
     themeConfig: {

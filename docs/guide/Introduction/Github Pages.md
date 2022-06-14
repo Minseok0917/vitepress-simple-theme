@@ -1,7 +1,6 @@
 ---
 title: Github Pages
-description: 세리가라
-createBy: 2022-01-21
+description: vitepress-simple-theme Github Pages Auto Deploy
 ---
 
 1.  `.github/workflows/main.yml`

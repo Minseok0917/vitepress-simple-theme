@@ -1,7 +1,7 @@
 ---
 title: Markdown Base
-description: 세리가라
-createBy: 2022-01-21
+description: vitepress-simple-theme Markdown Preview
+createBy: 2022-06-13
 image: https://photo.coolenjoy.net/data/editor/2102/d778f4ec8403ae4caaaa6415ea73b28932c47005.jpg
 ---
 
