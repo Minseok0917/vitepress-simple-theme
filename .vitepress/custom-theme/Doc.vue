@@ -1,7 +1,7 @@
 <template>
     <main class="main markdown-container">
         <div class="info">
-            <p class="createBy">{{ createBy }}</p>
+            <p class="createBy" v-if="createBy">{{ createBy }}</p>
             <h1 class="title">{{ frontmatter.title }}</h1>
             <div class="img-box" v-if="frontmatter.image">
                 <img :src="frontmatter.image" alt="image" />

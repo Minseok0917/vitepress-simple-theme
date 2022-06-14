@@ -13,49 +13,49 @@
  * VitePress Theme Custom
  * -------------------------------------------------------------------------- */
 
-.container[data-v-2d6af484] {
-    max-width: none;
+.container {
+    max-width: none !important;
 }
-.VPSidebar[data-v-259d4d10] {
-    width: auto;
-    padding: 72px 32px 128px;
+.VPSidebar {
+    width: auto !important;
+    padding: 72px 32px 128px !important;
 }
-.VPSidebar.open[data-v-259d4d10] {
-    width: calc(100vw - 64px);
-}
-
-.VPNavBar.has-sidebar .content[data-v-2d6af484] {
-    padding-right: 32px;
-    background: var(--vp-c-bg);
-    backdrop-filter: none;
-    border-bottom: 1px solid var(--vp-c-bg-alt);
+.VPSidebar.open {
+    width: calc(100vw - 64px) !important;
 }
 
-.VPContent.has-sidebar[data-v-230aa7d6] {
-    padding-left: var(--vp-sidebar-width);
-    padding-right: 0;
+.VPNavBar.has-sidebar .content {
+    padding-right: 32px !important;
+    background: var(--vp-c-bg) !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid var(--vp-c-bg-alt) !important;
 }
-.content-container[data-v-23d9e754] {
-    margin: 0;
-    max-width: 100%;
+
+.VPContent.has-sidebar {
+    padding-left: var(--vp-sidebar-width) !important;
+    padding-right: 0 !important;
+}
+.content-container {
+    margin: 0 !important;
+    max-width: 100% !important;
 }
 
 @media (max-width: 960px) {
-    .VPContent.has-sidebar[data-v-230aa7d6] {
-        padding-left: 0;
+    .VPContent.has-sidebar {
+        padding-left: 0 !important;
     }
 }
 @media (max-width: 768px) {
-    .VPNavBar.has-sidebar .content[data-v-2d6af484] {
-        padding-right: inherit;
+    .VPNavBar.has-sidebar .content {
+        padding-right: inherit !important;
     }
 }
 
-.VPNavBar[data-v-2d6af484] {
-    padding-right: 0;
+.VPNavBar {
+    padding-right: 0 !important;
 }
 .VPNavBarMenu :is(.VPNavBarMenuLink, .VPLink, .text) {
-    font-weight: 300;
+    font-weight: 300 !important;
 }
 
 /**
@@ -63,48 +63,48 @@
  * -------------------------------------------------------------------------- */
 
 .markdown-container .info {
-    text-align: center;
+    text-align: center !important;
 }
 .markdown-container .info .title {
-    font-weight: 300;
-    font-size: 2.5rem;
-    line-height: normal;
-    margin-bottom: 1rem;
+    font-weight: 300 !important;
+    font-size: 2.5rem !important;
+    line-height: normal !important;
+    margin-bottom: 1rem !important;
 }
 
 .markdown-container .info .createBy {
-    font-size: 0.875rem;
-    opacity: 0.9;
+    font-size: 0.875rem !important;
+    opacity: 0.9 !important;
 }
 .markdown-container .info .img-box {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
 }
 .content[data-v-23d9e754] {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
 }
 
 .VPDoc img {
-    margin: 20px auto;
+    margin: 20px auto !important;
 }
 .VPDoc h1 {
-    font-weight: 900;
+    font-weight: 900 !important;
 }
 .VPDoc h2 {
-    font-weight: 700;
-    border-top: 0;
+    font-weight: 700 !important;
+    border-top: 0 !important;
 }
 .VPDoc h2:first-child,
 .VPDoc .custom-block > p:first-child + h2 {
-    margin: 0;
+    margin: 0 !important;
 }
 .VPDoc .custom-block .header-anchor {
-    display: none;
+    display: none !important;
 }
 .VPDoc :is(h3, h4, h5, h6) {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .vp-doc div[class*="language-"] {
-    margin: 16px 0;
+    margin: 16px 0 !important;
 }
