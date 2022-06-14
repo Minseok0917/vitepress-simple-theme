@@ -1,0 +1,32 @@
+[
+    {
+        "text": "Guide",
+        "link": "/guide/info/a",
+        "activeMatch": "/guide/"
+    },
+    {
+        "text": "일지",
+        "activeMatch": "/2022/",
+        "items": [
+            {
+                "text": "1분기",
+                "link": "/2022/1분기/0121",
+                "activeMatch": "/2022/1분기"
+            },
+            {
+                "text": "2분기",
+                "link": "/2022/2분기/0401",
+                "activeMatch": "/2022/2분기"
+            }
+        ]
+    },
+    {
+        "text": "Configs",
+        "link": "/config/introduction",
+        "activeMatch": "/config/"
+    },
+    {
+        "text": "Changelog",
+        "link": "https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md"
+    }
+]
