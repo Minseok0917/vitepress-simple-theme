@@ -17,13 +17,13 @@ const mdDir = path.resolve(docsDir, markdownDir);
 
 export default {
     base: `/${repository}/`,
+    lang: "en-US",
     title: "VitePress Simple Theme",
     description:
         "Theme for sharing created using vitepress. Please use it a lot 😊",
     srcDir: mdDir,
     lastUpdated: true,
     themeConfig: {
-        // logo: "http://t1.daumcdn.net/liveboard/petzzi/f3582f7c08454fcbb54533997269b819.JPG",
         nav: menu,
         sidebar,
     },
@@ -36,23 +36,3 @@ export default {
         },
     },
 };
-
-function sidebarGuide() {
-    return [
-        {
-            text: "Guide",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {
-                    text: "A",
-                    link: "guide/a",
-                },
-                {
-                    text: "B",
-                    link: "guide/b",
-                },
-            ],
-        },
-    ];
-}

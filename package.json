@@ -1,5 +1,5 @@
 {
-    "repository":"vitepress-simple-theme",
+    "repository": "vitepress-simple-theme",
     "markdownDir": "docs",
     "scripts": {
         "dev": "vitepress dev",
