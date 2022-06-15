@@ -1,5 +1,29 @@
 {
+    "name": "vitepress-simeple-theme",
+    "version": "0.1.0",
+    "description": "Vitepress & theme ",
     "repository": "vitepress-simple-theme",
+    "keywords": [
+        "vite",
+        "vue",
+        "vitepress",
+        "vitepress-simple-theme"
+    ],
+    "homepage": "https://minseok0917.github.io/vitepress-simple-theme/",
+    "bugs": {
+        "url": "https://github.com/Minseok0917/vitepress-simple-theme/issues",
+        "email": "nminseok0917@naver.com"
+    },
+    "license": "MIT",
+    "author": "Minseok0917",
+    "main": "dist/my_module.min.js",
+    "repository": {
+        "type": "git",
+        "url": " https://github.com/Minseok0917/vitepress-simple-theme"
+    },
+    "engines": {
+        "node": ">=14.6.0"
+    },
     "markdownDir": "docs",
     "scripts": {
         "dev": "vitepress dev",
