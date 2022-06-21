@@ -1,6 +1,6 @@
 {
     "name": "vitepress-simeple-theme",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Vitepress & theme ",
     "repository": "vitepress-simple-theme",
     "keywords": [
@@ -9,6 +9,7 @@
         "vitepress",
         "vitepress-simple-theme"
     ],
+    "main": ".vitepress/theme/index.js",
     "homepage": "https://minseok0917.github.io/vitepress-simple-theme/",
     "bugs": {
         "url": "https://github.com/Minseok0917/vitepress-simple-theme/issues",
@@ -16,7 +17,6 @@
     },
     "license": "MIT",
     "author": "Minseok0917",
-    "main": "dist/my_module.min.js",
     "repository": {
         "type": "git",
         "url": " https://github.com/Minseok0917/vitepress-simple-theme"

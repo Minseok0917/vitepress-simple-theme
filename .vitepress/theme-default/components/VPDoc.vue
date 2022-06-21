@@ -4,7 +4,7 @@ import { useData } from "vitepress";
 import { useSidebar } from "../composables/sidebar";
 import VPDocAside from "./VPDocAside.vue";
 import VPDocFooter from "./VPDocFooter.vue";
-import Doc from "@custom-theme/Doc.vue";
+import Doc from "../../custom-theme/Doc.vue";
 
 const { page } = useData();
 const { hasSidebar } = useSidebar();

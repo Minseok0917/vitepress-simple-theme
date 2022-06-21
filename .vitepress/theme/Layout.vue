@@ -3,14 +3,14 @@ import { provide } from "vue";
 import {
     useSidebar,
     useCloseSidebarOnEscape,
-} from "@theme-default/composables/sidebar";
-import VPSkipLink from "@theme-default/components/VPSkipLink.vue";
-import VPBackdrop from "@theme-default/components/VPBackdrop.vue";
-import VPNav from "@theme-default/components/VPNav.vue";
-import VPLocalNav from "@theme-default/components/VPLocalNav.vue";
-import VPSidebar from "@theme-default/components/VPSidebar.vue";
-import VPContent from "@theme-default/components/VPContent.vue";
-import VPFooter from "@theme-default/components/VPFooter.vue";
+} from "../theme-default/composables/sidebar";
+import VPSkipLink from "../theme-default/components/VPSkipLink.vue";
+import VPBackdrop from "../theme-default/components/VPBackdrop.vue";
+import VPNav from "../theme-default/components/VPNav.vue";
+import VPLocalNav from "../theme-default/components/VPLocalNav.vue";
+import VPSidebar from "../theme-default/components/VPSidebar.vue";
+import VPContent from "../theme-default/components/VPContent.vue";
+import VPFooter from "../theme-default/components/VPFooter.vue";
 
 const {
     isOpen: isSidebarOpen,
