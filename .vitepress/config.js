@@ -1,7 +1,7 @@
 const path = require("path");
 const menu = require("./menu.json");
 const sidebar = require("./autoSidebar");
-const { markdownDir, repository } = require("../package.json");
+const { markdownDir } = require("../package.json");
 
 const resolveAlias = Object.fromEntries(
     Object.entries({
@@ -16,7 +16,7 @@ const docsDir = path.resolve(__dirname, "../");
 const mdDir = path.resolve(docsDir, markdownDir);
 
 export default {
-    base: `/${repository}/`,
+    base: `/vitepress-simeple-theme/`,
     lang: "en-US",
     title: "VitePress Simple Theme",
     description:

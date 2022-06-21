@@ -1,13 +1,14 @@
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import Layout from "./Layout.vue";
+import NotFound from "./NotFound.vue";
 import "../css/common.css";
 export default {
     ...DefaultTheme,
     Layout,
+    NotFound,
 
     // this is a Vue 3 functional component
-    NotFound: () => "custom 404",
 
     enhanceApp({ app, router, siteData }) {
         // app is the Vue 3 app instance from `createApp()`.

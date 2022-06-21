@@ -24,7 +24,7 @@
     width: calc(100vw - 64px) !important;
 }
 
-.VPNavBar.has-sidebar .content {
+.VPNavBar .content {
     padding-right: 32px !important;
     background: var(--vp-c-bg) !important;
     backdrop-filter: none !important;
@@ -38,6 +38,20 @@
 .content-container {
     margin: 0 !important;
     max-width: 100% !important;
+}
+
+.VPContent.is-home .VPHomeHero .container .main {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+.VPContent.is-home .VPHomeHero .container .main :is(.name, .text, .tagline) {
+    max-width: 100% !important;
+}
+.VPContent.is-home .VPHomeHero .container .main .actions {
+    justify-content: center;
+}
+.VPContent.is-home .VPHomeFeatures .container {
+    max-width: 960px !important;
 }
 
 @media (max-width: 960px) {
@@ -107,4 +121,52 @@
 
 .vp-doc div[class*="language-"] {
     margin: 16px 0 !important;
+}
+
+/**
+ * NotFound Container
+ * -------------------------------------------------------------------------- */
+
+.NotFound-container {
+    padding: 2rem 0;
+    text-align: left;
+}
+.NotFound-container h1 {
+    font-size: 5rem;
+    line-height: normal;
+}
+
+.NotFound-container a {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 0 50px;
+    line-height: 50px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    color: var(--vp-button-brand-text);
+    border-color: var(--vp-button-brand-border);
+    background-color: var(--vp-button-brand-hover-bg);
+}
+
+@media (max-width: 1100px) {
+    .NotFound-container h1 {
+        font-size: 3rem;
+    }
+    .NotFound-container a {
+        font-size: 1rem;
+        padding: 0 30px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 500px) {
+    .NotFound-container h1 {
+        font-size: 2rem;
+    }
+    .NotFound-container a {
+        margin-top: 2.5rem;
+        font-size: 1rem;
+        padding: 0 30px;
+        line-height: 45px;
+    }
 }
