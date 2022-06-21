@@ -16,7 +16,7 @@ const docsDir = path.resolve(__dirname, "../");
 const mdDir = path.resolve(docsDir, markdownDir);
 
 export default {
-    base: `/vitepress-simeple-theme/`,
+    base: `/vitepress-simple-theme/`,
     lang: "en-US",
     title: "VitePress Simple Theme",
     description:
