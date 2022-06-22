@@ -13,6 +13,7 @@
 <script setup>
 import { computed } from "vue";
 import { useData } from "vitepress";
+import "../plugins/dayjs.js";
 
 const { frontmatter } = useData();
 const createBy = computed(() =>

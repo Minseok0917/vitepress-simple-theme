@@ -2,7 +2,6 @@
 import DefaultTheme from "vitepress/theme";
 import Layout from "./Layout.vue";
 import NotFound from "./NotFound.vue";
-import "../plugins/dayjs";
 import "../css/common.css";
 export default {
     ...DefaultTheme,
