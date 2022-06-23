@@ -26,9 +26,7 @@ const googleAnalytics = [
     [
         "script",
         {},
-        [
-            `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${googleAnalyticsId}');`,
-        ],
+        `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${googleAnalyticsId}');`,
     ],
 ];
 
