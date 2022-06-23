@@ -31,6 +31,7 @@
     },
     "dependencies": {
         "moment": "^2.29.3",
-        "vitepress": "^1.0.0-alpha.1"
+        "vitepress": "^1.0.0-alpha.1",
+        "vuepress-plugin-sitemap": "^2.3.1"
     }
 }
