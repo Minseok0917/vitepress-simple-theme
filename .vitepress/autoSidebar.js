@@ -42,5 +42,4 @@ const sidebar = Object.fromEntries(
         })
 );
 
-console.log(sidebar);
 module.exports = sidebar;

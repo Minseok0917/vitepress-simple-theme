@@ -14,6 +14,23 @@ const resolveAlias = Object.fromEntries(
 
 const docsDir = path.resolve(__dirname, "../");
 const mdDir = path.resolve(docsDir, markdownDir);
+const googleAnalyticsId = `G-EJT2Y1E7NJ`;
+const googleAnalytics = [
+    [
+        "script",
+        {
+            async: true,
+            src: `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`,
+        },
+    ],
+    [
+        "script",
+        {},
+        [
+            `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${googleAnalyticsId}');`,
+        ],
+    ],
+];
 
 export default {
     base: `/vitepress-simple-theme/`,
@@ -23,6 +40,7 @@ export default {
         "Theme for sharing created using vitepress. Please use it a lot 😊",
     srcDir: mdDir,
     lastUpdated: true,
+    head: [...googleAnalytics],
     themeConfig: {
         nav: menu,
         sidebar,
