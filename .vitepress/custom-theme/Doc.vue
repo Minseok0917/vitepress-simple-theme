@@ -13,10 +13,10 @@
 <script setup>
 import { computed } from "vue";
 import { useData } from "vitepress";
-import "../plugins/dayjs.js";
+import moment from "moment";
 
 const { frontmatter } = useData();
 const createBy = computed(() =>
-    dayjs(frontmatter.value.createBy).format(`DD MMM YYYY`)
+    moment(frontmatter.value.createBy).format(`DD MMM YYYY`)
 );
 </script>
