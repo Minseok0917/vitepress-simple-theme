@@ -51,13 +51,4 @@ export default {
             alias: resolveAlias,
         },
     },
-    plugins: [
-        [
-            "sitemap",
-            {
-                hostname:
-                    "https://minseok0917.github.io/vitepress-simple-theme/",
-            },
-        ],
-    ],
 };
