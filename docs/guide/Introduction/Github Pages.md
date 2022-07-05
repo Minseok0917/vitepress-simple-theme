@@ -3,6 +3,8 @@ title: Github Pages
 description: vitepress-simple-theme Github Pages Auto Deploy
 ---
 
+![시발](/images/b.jpg)
+
 1.  `.github/workflows/main.yml`
 2.  main.yml
 
