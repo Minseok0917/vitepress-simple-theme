@@ -1,6 +1,9 @@
+import selectTree from "./t";
+
 const path = require("path");
 const menu = require("./menu.json");
 const sidebar = require("./autoSidebar");
+const t = require("./t");
 const { markdownDir } = require("../package.json");
 
 const resolveAlias = Object.fromEntries(
@@ -30,25 +33,29 @@ const googleAnalytics = [
     ],
 ];
 
-export default {
-    base: `/vitepress-simple-theme/`,
-    lang: "en-US",
-    title: "VitePress Simple Theme",
-    description:
-        "Theme for sharing created using vitepress. Please use it a lot 😊",
-    srcDir: mdDir,
-    lastUpdated: true,
-    head: [...googleAnalytics],
-    themeConfig: {
-        nav: menu,
-        sidebar,
-    },
-    vite: {
-        server: {
-            host: true,
+export default async () => {
+    const tt = await selectTree(path.resolve(__dirname, "../docs"));
+    return {
+        base: `/vitepress-simple-theme/`,
+        lang: "en-US",
+        title: "VitePress Simple Theme",
+        description:
+            "Theme for sharing created using vitepress. Please use it a lot 😊",
+        srcDir: mdDir,
+        lastUpdated: true,
+        head: [...googleAnalytics],
+        themeConfig: {
+            nav: menu,
+            sidebar,
+            tt,
         },
-        resolve: {
-            alias: resolveAlias,
+        vite: {
+            server: {
+                host: true,
+            },
+            resolve: {
+                alias: resolveAlias,
+            },
         },
-    },
+    };
 };

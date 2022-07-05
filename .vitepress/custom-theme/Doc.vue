@@ -15,6 +15,8 @@ import { computed } from "vue";
 import { useData } from "vitepress";
 import moment from "moment";
 
+const data = useData();
+console.log(data);
 const { frontmatter } = useData();
 const createBy = computed(() =>
     moment(frontmatter.value.createBy).format(`DD MMM YYYY`)
