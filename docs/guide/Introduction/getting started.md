@@ -114,6 +114,9 @@ export default {
             ],
         },
     },
+    vite: {
+        ssr: { format: "cjs" },
+    },
 };
 ```
 

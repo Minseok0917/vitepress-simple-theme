@@ -1,9 +1,9 @@
-import selectTree from "./t";
+import selectTree from "./pages";
 
 const path = require("path");
 const menu = require("./menu.json");
 const sidebar = require("./autoSidebar");
-const t = require("./t");
+const t = require("./pages");
 const { markdownDir } = require("../package.json");
 
 const resolveAlias = Object.fromEntries(
@@ -34,7 +34,7 @@ const googleAnalytics = [
 ];
 
 export default async () => {
-    const tt = await selectTree(path.resolve(__dirname, "../docs"));
+    const pages = await selectTree(path.resolve(__dirname, "../docs"));
     return {
         base: `/vitepress-simple-theme/`,
         lang: "en-US",
@@ -47,12 +47,13 @@ export default async () => {
         themeConfig: {
             nav: menu,
             sidebar,
-            tt,
+            pages,
         },
         vite: {
             server: {
                 host: true,
             },
+            ssr: { format: "cjs" },
             resolve: {
                 alias: resolveAlias,
             },
