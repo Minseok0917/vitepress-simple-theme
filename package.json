@@ -1,6 +1,6 @@
 {
     "name": "vitepress-simple-theme",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "description": "Vitepress & theme ",
     "repository": {
         "type": "git",
@@ -31,7 +31,7 @@
     },
     "dependencies": {
         "moment": "^2.29.3",
-        "vitepress": "^1.0.0-alpha.1"
+        "vitepress": "1.0.0-alpha.4"
     },
     "devDependencies": {
         "gray-matter-from-file": "^1.0.6"
